@@ -1,0 +1,559 @@
+/*
+Theme Name: JW
+Theme URI: http://www.justinwestphal.com
+Author: Justin Westphal
+Author URI: http://www.justinwestphal.com
+Description: My hand-crafted theme.
+Version: 1.1
+License: no license
+License URI: 
+Tags: design, graphic design, web design, badassery
+Text Domain: jw
+*/
+
+
+/*==================================================================*/
+/*                               RESET                              */
+/*==================================================================*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+	-webkit-box-sizing: border-box; 		/* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    		/* Firefox, other Gecko */
+	box-sizing: border-box;        			/* Opera/IE 8+ */
+	*behavior: url(js/boxsizing.htc);	/* IE 6/7 FFS*/}	
+	
+	
+	
+/*==================================================================*/
+/*                               STYLES                             */
+/*==================================================================*/
+
+
+/*=======================*/
+/*         BASIC         */
+/*=======================*/
+
+html, body{
+	width: 100%;
+	height: 100%;}
+
+body{ background: url(images/background.jpg) repeat-x top;	margin-bottom: 600px; }
+
+	
+/*=======================*/
+/*        HEADER         */
+/*=======================*/
+
+/* HEADER */
+
+header{
+	position: absolute;
+	left: 0;
+	width: 190px;
+	height: 100%;
+	background: url(images/nav_bg.jpg) no-repeat top left;}
+
+/* NAV */
+
+	nav{ margin-left: -15px; }
+	
+	nav ul{
+		text-align: center;
+		width: 121px;
+		margin: 0 auto;}
+		
+		nav li{
+			position: relative;
+			float: left;
+			width: 100%;
+			margin: 0 auto 15px;
+			text-transform: uppercase;}
+			
+			
+		nav h2			{ color: #7f7f7f; }
+		nav h2:hover	{ color: #F37A20; }	
+		nav h2:active	{ color: #c85516; }	
+		
+	.logo{
+		max-width: 121px;
+		height: 137px;
+		margin: 10px auto 30px;}
+
+
+/*=======================*/
+/*         BODY          */
+/*=======================*/
+
+.wrapper{
+	position: relative;
+	margin-left: 190px;
+	width: auto;
+	max-width: 840px;
+	height: 100%;
+	padding: 30px 2% 0;}
+
+.contents{
+	position: relative;
+	width: 96%;
+	height: auto;
+	float: left;
+	margin: 0 auto 20px;}
+	
+.gallery{
+	width: 100%;
+	margin: 0 auto 20px;
+	overflow: hidden;}	
+	
+.gallery li{
+	float: left;
+	width: 18.6%;
+	height: 18.6%;
+	border: 1px solid #e7e7e7;
+	overflow: hidden;
+	margin: 0.5%;}
+	
+	.gallery a{}
+		
+	.gallery img{
+		max-width: 100%;}		
+	
+img.inset {
+	max-width: 60%;
+	width: 15em;
+	height: auto;
+	float: left;
+	height: auto;
+	padding: 0.5em;
+	margin: 0 3% 3% 0;
+	display: inline;
+	-webkit-box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, .3);
+    box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, .3);}		
+
+	img.inset:hover{
+	-webkit-box-shadow:  0px 1px 4px 2px rgba(0, 0, 0, .3);
+    box-shadow:  0px 1px 4px 2px rgba(0, 0, 0, .3);}		
+
+
+
+/*=======================*/
+/*         POST          */
+/*=======================*/
+	
+/* Posts are wrapped in a div.entry */
+
+div.entry{
+	width: 100%;
+	height: 100%;
+	min-height: 100%;}
+	
+	.entry-text{
+		width: 36%;
+		height: 100%;
+		min-height: 100%;
+		margin-right: 4%;
+		float: left;}	
+	
+	/* To make the sticky thing work, I need to give the image section its own column. */
+	
+	.entry-image-column{
+		width: 60%;
+		max-width: 100%;
+		min-height: 100%;
+		height: 100%;
+		float: right;
+		position: relative;}
+	
+	
+	
+	/* Wordpress will automagically wrap imgs that aren't wrapped in block-leve elements in <p> tags.
+	   To prevent that, I'm gonna make a lovely frame for them.*/
+	
+	.frame{
+		width: 100%;
+		max-width: 100%;
+		height: auto;}
+		
+		.frame img{
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			padding:0.692em;
+			background:#fff;
+			border-color: #e6e3d3;
+			border-width:0.077em;
+			border-style:solid;}	
+
+	
+	
+	
+
+/*==================================================================*/
+/*                             TYPOGRAPHY                           */
+/*==================================================================*/
+
+
+
+/*=======================*/
+/*       HEADINGS        */
+/*=======================*/
+
+
+h1{
+	font-family: 'Varela Round', sans-serif;
+	letter-spacing: -0.05em;
+	font-size: 2.3em;
+	margin-bottom: 20px;
+	color: #333}
+	
+h2{
+	font-family: 'Varela Round', sans-serif;
+	color: #7f7f7f;
+	font-size: 1.5em;
+	margin-bottom: 1em;}
+
+	h2.graphic_design	{ color: #00BDFF; font-weight: 400; }
+	h2.web_design		{ color: #6AD242; font-weight: 400; }
+	h2.motion_design	{ color: #D35ED3; font-weight: 400; }
+	
+	li h2				{ font-family: 'Oswald', sans-serif; }
+
+h3{	
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1.4em;
+	color: #7f7f7f;
+	line-height: 1.5em;}
+	
+h4{}
+
+h5{}
+
+h6{}
+
+
+
+/*=======================*/
+/*         LINKS         */
+/*=======================*/
+
+a{
+	color: #000;
+	text-decoration: none;}
+	
+	h2 a, p a				{ border-bottom: 1px dotted #7f7f7f; color: #7f7f7f; }
+	
+	p a						{ font-weight: bolder; }
+	
+	h2 a:hover, p a:hover	{ color: #F37A20; border-bottom-color: #F37A20; }
+	h2 a:active, p a:active	{ color: #c85516; border-bottom-color: #c85516; }
+	
+
+
+/*=======================*/
+/*       BODY TEXT       */
+/*=======================*/
+
+p{
+	color: #4c4c4c;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-weight: 200;
+	line-height: 1.5em;
+	letter-spacing: 0.01em;
+	text-align: justify;
+	text-justify: newspaper;
+	margin-bottom: 20px;
+	max-width: 800px;}
+
+::-moz-selection{
+    background-color: #fff389;
+    color: #000;}
+
+::selection{
+    background-color: #fff389;
+    color: #000;}
+    
+    
+
+/*==============================*/
+/*         CONTACT FORM         */
+/*==============================*/
+
+
+#contact_form{
+	max-width: 25em;}
+	
+	#contact_form label{
+		width: 100%;
+		float: left;
+		font-size: 1.2em;
+		color: #7f7f7f;
+		line-height: 1.5em;}
+		
+	input, textarea{
+		width: 100%;
+		border: 1px solid #ccc;}	
+		
+		input{
+			height: 2.5em;
+			text-align: center;
+			font-size: 1.2em;}
+			
+		textarea{
+			min-height: 15em;
+			font-size: 1.2em;
+			padding: 5px;
+			color: #4c4c4c;
+			font-family: "Helvetica", "Arial", sans-serif;
+			font-weight: 200;
+			line-height: 1.5em;
+			letter-spacing: 0.01em;}	
+		
+	#form_submit{
+		-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+		box-shadow:inset 0px 1px 0px 0px #ffffff;
+		background-color:#ededed;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		border-radius:6px;
+		border:1px solid #dcdcdc;
+		display:inline-block;
+		color:#777777;
+		font-family:arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:1px 1px 0px #ffffff;}
+		
+	#form_submit:hover{
+		background-color:#dfdfdf;}
+		
+	#form_submit:active{
+		position:relative;
+		top:1px;}
+	
+.hide	{ display: none; }
+
+.error{
+	float: left;
+	font-size: 1em;
+	font-variant: small-caps;
+	color: #ea9f8b;}
+
+.error_input	{ border: 2px solid #ea9f8b; }
+
+.success h2		{ color: #1bd49d; font-size: 2em; font-variant: normal; }
+
+
+
+/*=====================================================================*/
+/*                             MEDIA QUERIES                           */
+/*=====================================================================*/
+
+	/* Bigger than standard 960 (browsers) */
+	@media only screen and (min-width:1600px) {
+	}
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		.contents	{ width: 98%; }
+		.gallery li	{ width: 24%; }
+		.wrapper{
+			margin: inherit auto 0 inherit;}
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+	
+		body{ background: #FFF; }
+
+		header{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: auto;
+		background: none;
+		margin-bottom: 0;}
+	
+		nav{ 
+		float: left;
+		display: block;
+		width: 100%;
+		height: 130px;
+		background: #FFF url(images/horizontal_nav_bg.jpg) no-repeat bottom left;;
+		margin: auto auto 10px;}
+		
+		nav ul{
+			width: 100%;
+			height: 137px;
+			padding: auto 5%;}
+			
+			nav li{
+				float: left;
+				display: inline-block;
+				width: auto;
+				margin: auto 10px auto;
+				font-size: 0.9em;
+				letter-spacing:0;
+				line-height: 9em;}
+			
+		.logo { margin: 5px 5px 0 5px; width: 20%; }	
+			.logo img{ width: 90px; }
+			
+		.wrapper{
+			position: relative;
+			margin: 15% auto 0;
+			width: 95%;
+			height: 100%;}
+		
+		.contents{
+			position: relative;
+			width: 100%;
+			margin: 10px auto;}
+			
+		.gallery li { width: 32.3%; }
+		
+	
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		-webkit-text-size-adjust: none;
+		
+		.contents{
+			width: 95%;
+			margin: 10px auto;
+			float: none;}
+					
+		}
+		
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		-webkit-text-size-adjust: none;
+		
+		.wrapper{
+			position: relative;
+			margin: auto 0;
+			width: 95%;
+			height: 100%;}
+			
+		nav{
+			width: 100%;
+			height: 110px;}
+			
+			nav ul{
+				}
+
+		.logo{
+			width: 70px;
+			height: auto;
+			margin: 12px 15px 10px auto;}
+			
+			.logo img { width: 90%; }
+
+	
+		nav li{
+			font-size: .6em;
+			margin: 0 10px inherit 0;}
+	
+		.contents h1{
+			font-size: 2em;
+			text-align: center;}
+
+		.contents h2{
+			font-size: 1.2em;
+			text-align: center;}
+			
+		.gallery li { width: 49%; }	
+		
+		#contact_form	{ width: 100%; max-width: 100%; }
+	
+		.entry-text{
+			width: 100%;
+			max-width: 100%;
+			height: 100%;
+			min-height: 100%;
+			margin: 0 auto 4%;
+			float: left;}	
+
+		.entry-image-column{
+			width: 100%;
+			max-width: 100%;
+			min-height: 100%;
+			margin-bottom: 4%;
+			height: 100%;
+			float: left;}
+		
+	}
+
+
+
+/*===============================*/
+/*        HELPER CLASSES         */
+/*===============================*/
+
+.first	{margin-left: 0;}
+.last	{margin-right: 0;}
+
+.left	{ float: left; }
+.right	{ float: right; }
+.center	{ margin: 0 auto; }
+
+.spacer { margin-bottom: 30px; }
+
+.clear	{ clear: both; }
+.hidden	{ display: none; visibility: hidden; height: 0; width: 0;}
