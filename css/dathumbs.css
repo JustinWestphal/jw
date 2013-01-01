@@ -3,10 +3,9 @@
 .da-thumbs li {
 	float: left;
 	position: relative;
-	
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
 }
 .da-thumbs li a,

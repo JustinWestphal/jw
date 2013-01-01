@@ -6,9 +6,9 @@ Template Name: JW
 <?php get_header(); ?>
 		<section class="contents">
 			<h1>Graphic and web design to get everyone really excited.</h1>
-			<p>I make brands, web experiences, and anything else you could ever need to look your absolute best.</p>
+			<p>I create brands, web experiences, and anything else you could ever need to look your absolute best.</p>
 			
-			<p>Please feel free to have a look at my portfolio. Whether you're looking to build a world-class, timeless brand, reboot your business card or brochure, craft a fun, engaging website, or just say hello, I'd love to hear your story and see if we can make some magic happen. And if you're in the Osaka area, I'd be thrilled to hear it over a coffee.</p>
+			<p>I'm currently available for projects, so whether you're looking to build a world-class, timeless brand, reboot your business card or brochure, or craft a fun, engaging website, <a href="/contact/">I'd love to hear your story</a> and see if we can't make some magic happen.</p>
 		</section>
 		
 		<section class="contents gallery">
@@ -16,7 +16,7 @@ Template Name: JW
 						
 						<!-- List Graphic Design Posts -->						
 						<?php query_posts('category_name=graphic-design'); ?>
-						<h2 class="graphic_design">Graphic Design</h2>
+						<h3 class="graphic_design">Graphic</h3>
 						<?php while (have_posts()) : the_post(); ?>
 							
 						
@@ -38,7 +38,7 @@ Template Name: JW
 						
 						<!-- List Web Design Posts -->						
 						<?php query_posts('category_name=web-design'); ?>
-						<h2 class="web_design">Web Design</h2>
+						<h3 class="web_design">Web</h3>
 						<?php while (have_posts()) : the_post(); ?>
 						
 							<?php //get article_image (custom field) ?>

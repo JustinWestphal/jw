@@ -19,8 +19,11 @@
 
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/js/libs/jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url');?>/js/libs/modernizr-2.0.6.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url');?>/js/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url');?>/js/script.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
 
 	
 	<title><?php bloginfo('name'); ?> | <?php wp_title();?>	</title>
@@ -55,10 +58,11 @@
 					</a>
 				</li>
 				<?php $args = array(
-	'link_before'  => '<h2>',
-	'link_after'   => '</h2>',
-	'title_li'     => ''
-); ?>
+					'link_before'  => '<li>',
+					'link_after'   => '</li>',
+					'title_li'     => ''
+					);
+				?>
 				<?php wp_list_pages( $args );?>
 			</ul>
 		</nav>

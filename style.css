@@ -1,4 +1,4 @@
-/*
+	/*
 Theme Name: JW
 Theme URI: http://www.justinwestphal.com
 Author: Justin Westphal
@@ -116,12 +116,14 @@ header{
 			float: left;
 			width: 100%;
 			margin: 0 auto 15px;
-			text-transform: uppercase;}
+			text-transform: uppercase;
+			font-family: 'Oswald', sans-serif;
+			font-size: 1.5em;
+			line-height: 1.3em;}	
 			
-			
-		nav h2			{ color: #7f7f7f; }
-		nav h2:hover	{ color: #F37A20; }	
-		nav h2:active	{ color: #c85516; }	
+			nav li a		{ color: #7f7f7f; }
+			nav li a:hover	{ color: #F37A20; }	
+			nav li a:active	{ color: #c85516; }	
 		
 	.logo{
 		max-width: 121px;
@@ -134,32 +136,38 @@ header{
 /*=======================*/
 
 .wrapper{
-	position: relative;
-	margin-left: 190px;
 	width: auto;
 	max-width: 840px;
-	height: 100%;
-	padding: 30px 2% 0;}
+	min-height: 100%;
+	position: relative;
+	margin-left: 190px;
+	padding: 30px 3% 30px 2%;}
 
 .contents{
 	position: relative;
-	width: 96%;
+	width: 100%;
 	height: auto;
 	float: left;
 	margin: 0 auto 20px;}
 	
-.gallery{
-	width: 100%;
-	margin: 0 auto 20px;
+section.gallery{
+	width: 48.214286%;
+	float: left;
+	margin: auto 1.2345679% auto 0;
 	overflow: hidden;}	
 	
-.gallery li{
+	.gallery ul{
+		float: left;
+		width: 100%; /* Old: 18.6% */
+		height: 100%; /* Old: 18.6% */}
+	
+.gallery li{ /* The thumbnails */
 	float: left;
-	width: 18.6%;
-	height: 18.6%;
+	width: 47.5308%; /* Old: 18.6% */
+	height: 47.5308%; /* Old: 18.6% */
 	border: 1px solid #e7e7e7;
 	overflow: hidden;
-	margin: 0.5%;}
+	margin: 1.2345679%;} /* Old: 0.5% */
 	
 	.gallery a{}
 		
@@ -175,12 +183,12 @@ img.inset {
 	padding: 0.5em;
 	margin: 0 3% 3% 0;
 	display: inline;
-	-webkit-box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, .3);
-    box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, .3);}		
+	-webkit-box-shadow:  0px 0px 1px 2px rgba(0,0,0,0.075);
+	box-shadow:  0px 0px 1px 2px rgba(0,0,0,0.075);}
 
-	img.inset:hover{
-	-webkit-box-shadow:  0px 1px 4px 2px rgba(0, 0, 0, .3);
-    box-shadow:  0px 1px 4px 2px rgba(0, 0, 0, .3);}		
+	img.inset:hover, .frame img:hover{
+		-webkit-box-shadow:  0px 0px 4px 1px rgba(0,0,0,0.2);
+		box-shadow:  0px 0px 4px 1px rgba(0,0,0,0.2);}
 
 
 
@@ -213,8 +221,7 @@ div.entry{
 		position: relative;}
 	
 	
-	
-	/* Wordpress will automagically wrap imgs that aren't wrapped in block-leve elements in <p> tags.
+	/* Wordpress will automagically wrap imgs that aren't wrapped in block-level elements in <p> tags.
 	   To prevent that, I'm gonna make a lovely frame for them.*/
 	
 	.frame{
@@ -230,11 +237,96 @@ div.entry{
 			background:#fff;
 			border-color: #e6e3d3;
 			border-width:0.077em;
-			border-style:solid;}	
+			border-style:solid;
+			-webkit-box-shadow:  0px 0px 4px 1px rgba(0,0,0,0.075);
+			box-shadow:  0px 0px 4px 1px rgba(0,0,0,0.075);
+			margin-bottom: 2%;}		
+			
+/* Blog nav link section */
 
+nav.blog-nav{
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	margin: 0 auto 30px;}
+
+	nav.blog-nav div{
+		width: 50%;
+		height: 50px;
+		background: #e7e7e7;
+		text-align: center;
+		margin-bottom: 0;
+		float: left;}
 	
+		nav.blog-nav div:hover { background: #F37A20; }
+		
+		nav.blog-nav div:active	{ background: #c85516; }
+
+		nav.blog-nav div .previous	{ float: left; }
 	
+		nav.blog-nav div .next		{ float: right; }
+		
+		nav.blog-nav div a{
+			width: 100%;
+			height: 100%;
+			display: block;
+			font-family: 'Varela Round', sans-serif;
+			color: #A3A3A3;
+			line-height: 50px;}
+		
+			nav.blog-nav div a:hover	{ color: #fff; }
 	
+
+/* Comment Styles*/
+
+.commentlist .reply {}
+.commentlist .reply a {}
+
+.commentlist .alt {}
+.commentlist .odd {}
+.commentlist .even {}
+.commentlist .thread-alt {}
+.commentlist .thread-odd {}
+.commentlist .thread-even {}
+.commentlist li ul.children .alt {}
+.commentlist li ul.children .odd {}
+.commentlist li ul.children .even {}
+
+.commentlist .vcard {}
+.commentlist .vcard cite.fn {}
+.commentlist .vcard span.says {}
+.commentlist .vcard img.photo {}
+.commentlist .vcard img.avatar {}
+.commentlist .vcard cite.fn a.url {}
+
+.commentlist .comment-meta {} 
+.commentlist .comment-meta a {}
+.commentlist .commentmetadata {}
+.commentlist .commentmetadata a {}
+
+.commentlist .parent {}
+.commentlist .comment {}
+.commentlist .children {}
+.commentlist .pingback {}
+.commentlist .bypostauthor {}
+.commentlist .comment-author {}
+.commentlist .comment-author-admin {}
+
+.commentlist {}
+.commentlist li {}
+.commentlist li p {}
+.commentlist li ul {}
+.commentlist li ul.children li {}
+.commentlist li ul.children li.alt {}
+.commentlist li ul.children li.byuser {}
+.commentlist li ul.children li.comment {}
+.commentlist li ul.children li.depth-{id} {}
+.commentlist li ul.children li.bypostauthor {}
+.commentlist li ul.children li.comment-author-admin {}
+
+#cancel-comment-reply {}
+#cancel-comment-reply a {}
 
 /*==================================================================*/
 /*                             TYPOGRAPHY                           */
@@ -251,26 +343,29 @@ h1{
 	font-family: 'Varela Round', sans-serif;
 	letter-spacing: -0.05em;
 	font-size: 2.3em;
+	font-weight: 700;
 	margin-bottom: 20px;
 	color: #333}
 	
 h2{
 	font-family: 'Varela Round', sans-serif;
-	color: #7f7f7f;
+	color: #777777;
 	font-size: 1.5em;
-	margin-bottom: 1em;}
-
-	h2.graphic_design	{ color: #00BDFF; font-weight: 400; }
-	h2.web_design		{ color: #6AD242; font-weight: 400; }
-	h2.motion_design	{ color: #D35ED3; font-weight: 400; }
+	line-height: 1.5em;
+	margin-bottom: 15px;}
 	
-	li h2				{ font-family: 'Oswald', sans-serif; }
 
 h3{	
 	font-family: 'Varela Round', sans-serif;
-	font-size: 1.4em;
-	color: #7f7f7f;
-	line-height: 1.5em;}
+	font-size: 1.9em;
+	font-weight: 700;
+	color: #F37A20;
+	margin-bottom: 30px;}
+	
+	h3.graphic_design	{ color: #00BDFF; margin-bottom: 15px; }
+	h3.web_design		{ color: #6AD242; margin-bottom: 15px; }
+	h3.motion_design	{ color: #D35ED3; margin-bottom: 15px; }
+
 	
 h4{}
 
@@ -288,12 +383,14 @@ a{
 	color: #000;
 	text-decoration: none;}
 	
-	h2 a, p a				{ border-bottom: 1px dotted #7f7f7f; color: #7f7f7f; }
+	h2 a, h3 a, p a				{ border-bottom: 1px dotted #7f7f7f; color: #7f7f7f; }
 	
 	p a						{ font-weight: bolder; }
 	
-	h2 a:hover, p a:hover	{ color: #F37A20; border-bottom-color: #F37A20; }
-	h2 a:active, p a:active	{ color: #c85516; border-bottom-color: #c85516; }
+	h2 a:hover, a h2:hover,h3 a:hover, a h3:hover, p a:hover		{ color: #F37A20; border-bottom-color: #F37A20; }
+	h2 a:active, a h3:active, a h2:active, h3 a:active, p a:active	{ color: #c85516; border-bottom-color: #c85516; }
+
+	a .date	{ margin-top: -1.4em; }
 	
 
 
@@ -303,14 +400,25 @@ a{
 
 p{
 	color: #4c4c4c;
-	font-family: "Helvetica", "Arial", sans-serif;
-	font-weight: 200;
-	line-height: 1.5em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 13px/1.231;
+	font-weight: 400;
+	line-height: 1.7em;
 	letter-spacing: 0.01em;
 	text-align: justify;
 	text-justify: newspaper;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	max-width: 800px;}
+	
+	p em		{ font-style: italic; }
+	p strong	{ font-weight: 700; }
+
+	p.date{
+		font-size: 0.9em;
+		color: #bfbfbf;
+		letter-spacing: 0.05em;
+		line-height: 0;
+		margin: 0 auto 30px;}
 
 ::-moz-selection{
     background-color: #fff389;
@@ -319,8 +427,30 @@ p{
 ::selection{
     background-color: #fff389;
     color: #000;}
+
     
     
+/*=======================*/
+/*         LISTS         */
+/*=======================*/
+
+/* Styles for entry lists: */
+
+.entry ul{
+		list-style: disc;
+		list-style-position: inside;
+		margin: auto auto 30px 15px;}
+
+	.entry li{
+		color: #4c4c4c;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 13px/1.231;
+		font-weight: 400;
+		line-height: 1.7em;
+		letter-spacing: 0.01em;
+		margin-bottom: 1em;}
+
+
 
 /*==============================*/
 /*         CONTACT FORM         */
@@ -409,10 +539,11 @@ p{
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
+/*
 		.contents	{ width: 98%; }
-		.gallery li	{ width: 24%; }
 		.wrapper{
 			margin: inherit auto 0 inherit;}
+*/
 	}
 
 	/* All Mobile Sizes (devices and browser) */
@@ -446,17 +577,17 @@ p{
 				float: left;
 				display: inline-block;
 				width: auto;
-				margin: auto 10px auto;
-				font-size: 0.9em;
+				margin: auto 3% auto;
+				font-size: 1.2em;
 				letter-spacing:0;
-				line-height: 9em;}
+				line-height: 110px;}
 			
 		.logo { margin: 5px 5px 0 5px; width: 20%; }	
 			.logo img{ width: 90px; }
 			
 		.wrapper{
 			position: relative;
-			margin: 15% auto 0;
+			margin: 100px auto 0;
 			width: 95%;
 			height: 100%;}
 		
@@ -465,7 +596,6 @@ p{
 			width: 100%;
 			margin: 10px auto;}
 			
-		.gallery li { width: 32.3%; }
 		
 	
 	}
@@ -486,8 +616,6 @@ p{
 		-webkit-text-size-adjust: none;
 		
 		.wrapper{
-			position: relative;
-			margin: auto 0;
 			width: 95%;
 			height: 100%;}
 			
@@ -499,16 +627,16 @@ p{
 				}
 
 		.logo{
-			width: 70px;
+			width: 50px;
 			height: auto;
-			margin: 12px 15px 10px auto;}
+			margin-top: 20px;}
 			
 			.logo img { width: 90%; }
 
 	
 		nav li{
-			font-size: .6em;
-			margin: 0 10px inherit 0;}
+			font-size: 0.9em;
+			line-height: 90px;}
 	
 		.contents h1{
 			font-size: 2em;
@@ -518,7 +646,7 @@ p{
 			font-size: 1.2em;
 			text-align: center;}
 			
-		.gallery li { width: 49%; }	
+		.gallery li { width: 100%; }	
 		
 		#contact_form	{ width: 100%; max-width: 100%; }
 	
@@ -546,8 +674,10 @@ p{
 /*        HELPER CLASSES         */
 /*===============================*/
 
-.first	{margin-left: 0;}
-.last	{margin-right: 0;}
+.half	{ width: 48.214286%; margin: auto 1.7857143%; float: left; }
+
+.first	{ margin-left: 0; }
+.last	{ margin-right: 0; }
 
 .left	{ float: left; }
 .right	{ float: right; }
@@ -557,3 +687,6 @@ p{
 
 .clear	{ clear: both; }
 .hidden	{ display: none; visibility: hidden; height: 0; width: 0;}
+
+/* Sorry, little WP Smiley dude! */
+img#wpstats	{ display:none }

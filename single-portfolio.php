@@ -71,8 +71,17 @@ get_header(); ?>
 					<p><?php echo $the_solution;?></p>
 										
 				</div><!-- /entry-text -->
-            
+
         </div><!-- /entry -->
+
+        	<div class="clear"></div>
+
+			<nav class="blog-nav">
+							
+				<div class="previous"><?php previous_post_link('<h4>%link</h4>', 'Previous Project', TRUE); ?></div>
+				<div class="next"><?php next_post_link('<h4>%link</h4>', 'Next Project', TRUE); ?></div>
+				
+			</nav>
 
     </div>
     <?php endwhile; endif; ?>

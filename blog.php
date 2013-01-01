@@ -11,8 +11,10 @@ Template Name: JW Blog
 <?php query_posts('category_name=blog'); ?>
 <?php while (have_posts()) : the_post(); ?>
 	
-		<a href="<?php the_permalink();?>" title="title">
+		<a href="<?php the_permalink();?>">
 			<h2><?php echo get_the_title($ID);?></h2>
+			<p class="date"><?php echo the_time(get_option('date_format'));?></p>
+
 		</a>	
 <?php endwhile;?>
 
